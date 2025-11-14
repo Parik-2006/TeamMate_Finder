@@ -6,7 +6,7 @@ from authlib.integrations.flask_client import OAuth
 app = Flask(__name__)
 
 # --- Configuration (replace with your values) ---
-app.secret_key =fds
+app.secret_key =SECRET_KEY
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -15,8 +15,8 @@ Session(app)
 oauth = OAuth(app)
 oauth.register(
     name="google",
-    client_id=fds,
-    client_secret=fds,
+    client_id=GOOGLE_CLIENT_ID,
+    client_secret=GOOGLE_CLIENT_SECRET,
     access_token_url="https://oauth2.googleapis.com/token",
     authorize_url="https://accounts.google.com/o/oauth2/v2/auth",
     api_base_url="https://www.googleapis.com/oauth2/v1/",
@@ -73,5 +73,3 @@ def logout():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-#hello
