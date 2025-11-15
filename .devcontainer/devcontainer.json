@@ -1,0 +1,4 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "pip install 'Flask>=2.2' 'Authlib>=1.2' 'Flask-Session>=0.5' 'requests>=2.28'"
+}
